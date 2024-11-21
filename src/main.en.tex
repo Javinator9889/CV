@@ -1,0 +1,198 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{nicefrac}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
+\addbibresource{CV.bib}
+
+\begin{document}
+\name{Javier Alonso Silva}
+\tagline{\textsc{Passionate Engineer working on making a better world}}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{2.5cm}{static/me}
+\personalinfo{
+  \begin{tabularx}{\linewidth}{ l l l }
+    \linkedin{linkedin.com/in/javinator9889} & \github{github.com/Javinator9889}       & \location{Madrid, España}                                                                                     \\
+    \email{contact@javinator9889.com}        & \homepage{javinator9889.com} & {\printinfo{\faPlusSquare}{\hypersetup{urlcolor=black}\href{https://linktr.ee/javinator9889}{Click to find out more!}}} \\
+  \end{tabularx}
+}
+
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+  \makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+% 
+% \begin{fullwidth}
+%   I am a passionate engineer with experience in R\&D, full-stack development, and higher education. I am currently working as an R\&D engineer at Teldat S.A., developing the NGFW used by all brand-new products. Additionally, I am a member of Nova, a merit-based access network for top talent to connect and accelerate their careers. I have also worked as a higher education professor, teaching subjects such as ISO and PSP, and mentoring student projects. As a full-stack developer, I have worked on several private projects, including the ADAF project developed for Saturno Labs. I have also been involved in various tech conferences as a speaker, organizer, and volunteer coordinator. I am highly skilled in Python, SQL, Shell, hardware, Android development, NodeJS, embedded systems, and DevOps. I hold a master's degree in International Leadership and an MSc. in Distributed and Embedded Systems Software, as well as a BSc. in Computer Science. I am a self-motivated individual who is constantly learning and strives for excellence in all of my endeavors.
+% \end{fullwidth}
+% 
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[sidebar/1/sidebar.en]{Experience}
+
+\cvevent{Team Lead, Embedded Enigneering}{\accentsub{https://geotab.com}{GEOTAB}}{Oct. 2024 -- \textit{nowadays}}{}
+
+\begin{itemize}
+  \item Lead of a newly created team, collaborating with multiple departments in the company's
+        brand-new product.
+  \item Design and development of an inter-chip communication protocol.
+  \item Aligning the team's goals with the company's vision.
+  \item Yet more to come!
+\end{itemize}
+
+\divider
+
+\cvevent{Embedded Engineer}{\accentsub{https://geotab.com}{GEOTAB}}{Sept. 2023 -- Oct. 2024}{}
+{\small Geotab is the world's \#1 commercial telematics provider. We connect vehicles to the internet and provide web-based analytics to help organizations manage their fleets.}
+
+\begin{itemize}
+  \item Design and development of the firmware for company devices.
+  \item Migration of the legacy firmware to a POSIX-based system.
+  \item Test infrastructure and reliability to ensure the correct firmware behavior.
+  \item Development of the CI/CD pipeline for the firmware.
+\end{itemize}
+
+\divider
+
+\cvevent{R\&D Engineer}{\accentsub{https://teldat.com}{Teldat S.A.}}{Sept. 2021 -- Sept. 2023}{}
+{\small Teldat is a Spanish company offering valuable solutions for cloud access, scalable remote office
+connectivity - mainly based on SDWAN, cybersecurity, and voice/data communications.}
+
+\begin{itemize}
+  \item Development of the NGFW used by all our brand-new products.
+  \item Linux kernel \textit{drivers} and \textit{networking}.
+  \item CI and tests orchestration -- Orcha.
+\end{itemize}
+
+\cvsection{Projects}
+
+\cvevent{Speaker}{\accentsub{https://www.python.org/psf-landing/}{The PSF (2023)}, \accentsub{https://www.europython-society.org/}{EuroPython Society (2024)}, \accentsub{https://es.python.org}{Python Spain (2023, 2024)}}{}{}
+
+\begin{itemize}
+  \item Talk ``Orcha: Procesamiento Masivo Paralelo (MPP) y diseño de APIs''.
+  \item Talk ``RPA, TDD, \& Embedded: A World Glued Together With Python''.
+  \item Opening \& closing talks at PyConES 2024.
+\end{itemize}
+
+\divider
+
+\cvevent{Python Spain President (2024 -- 2026)}{}{}{}
+
+\begin{itemize}
+  \item Handle projects, schedules, volunteers, local conferences, and resources.
+  \item Collaborate closely with companies, communities, and other organizations.
+\end{itemize}
+
+\divider
+
+\cvevent{PyConES Organization}{\accentsub{https://es.python.org/}{Python Spain} (2022 -- 2024)}{}{}
+
+\begin{itemize}
+  \item Head of the organization.
+  \item Management of volunteers, resources, and infrastructure during the conference.
+  \item Contact -- and further follow-up conversations -- with multiple companies for them to sponsor us, managing their needs, deadlines, etc.
+\end{itemize}
+
+%%% OPTIONAL - Uncomment this section for two-page CVs
+% \clearpage
+
+% \cvsection[sidebar/2/sidebar.en]{Other Information}
+
+% \nocite{*}
+
+% {\large \printinfo{\faCode}{\textbf{Applications}}}
+
+% \begin{center}
+%   \appMaterialCard[8cm]{Handwashing reminder}{Kotlin}{An app that reminds you when you have to wash your hands.}{Javinator9889/Handwashing-reminder}{https://github.com/Javinator9889/Handwashing-reminder}
+
+%   \appMaterialCard[8cm]{pArm -- S2}{C}{pArm software built-in the final device.}{pArm-TFG/pArm-S2}{https://github.com/pArm-TFG/pArm-S2}
+
+%   \appMaterialCard[8cm]{Orcha}{Python}{Orchestration and massive parallel execution of processes framework.}{Javinator9889/orcha}{https://github.com/Javinator9889/orcha}
+
+%   % \appMaterialCard[8cm]{pyGle}{Python}{Una herramienta para buscar en toda la web usando Google.}{Javinator9889/pyGle}{https://github.com/Javinator9889/pyGle}
+%   \divider
+
+%   Want to see more projects? Consider having a look at my GitHub:
+
+%   \href{https://github.com/Javinator9889/}{\githubsymbol{} Javinator9889}
+% \end{center}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{\textbf{Publications}}}, type=article]
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+%%% This is the end of my CV.
+% If the NEXT page doesn't start with a \cvsection but you'd
+% still like to add a sidebar, then use this command on THIS
+% page to add it. The optional argument lets you pull up the
+% sidebar a bit so that it looks aligned with the top of the
+% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}

@@ -1,0 +1,184 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+\usepackage{nicefrac}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
+\addbibresource{CV.bib}
+
+\begin{document}
+\name{Javier Alonso Silva}
+\tagline{\textsc{Ingeniero trabajando activamente en hacer del mundo un lugar mejor}}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{2.5cm}{static/me}
+\personalinfo{
+  \begin{tabularx}{\linewidth}{ l l }
+    \email{contact@javinator9889.com}        & \location{Madrid, España} \\
+    \linkedin{linkedin.com/in/javinator9889} & \linktree{javinator9889}  \\
+  \end{tabularx}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+  \makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[sidebar/1/sidebar.es]{Experiencia}
+
+\cvevent{Ingeniero I+D}{\accentsub{https://teldat.com}{Teldat S.A.}}{Sept. 2021 -- \textit{actualidad}}{}
+\begin{itemize}
+  \item Desarrollo del NGFW que usan nuestros productos.
+  \item \textit{Drivers} y \textit{networking} en el kernel de Linux.
+  \item CI y orquestación de tests -- Orcha.
+\end{itemize}
+\divider
+
+\cvevent{Miembro}{\accentsub{https://www.novatalent.com/}{Nova}}{Mayo 2023 -- \textit{actualidad}}{}
+{\small Nova es una red de acceso según méritos en donde el top 3\% del talento conecta, desarrolla y
+acelera su carrera profesional, unos con otros.}
+
+\divider
+
+\cvevent{Profesor Grado Superior}{\accentsub{https://retamar.com/}{Retamar FP}}{Enero 2021 -- Junio 2021}{}
+\begin{itemize}
+  \item Profesor de las asignaturas ISO (\textit{ASIR1}) y PSP (\textit{DAM2}).
+  \item Mentorización de proyectos y prácticas en empresas.
+\end{itemize}
+\divider
+
+\cvevent{Desarrollador \textit{full--stack}}{\textit{Freelance}}{Dic. 2016 -- \textit{actualidad}}{}
+\begin{itemize}
+  \item Proyecto ADAF, para \href{https://saturnolabs.com/}{SaturnoLabs}.
+  \item Otros proyectos privados (diseño \textit{hardware}, Android apps, \dots).
+\end{itemize}
+
+\cvsection{Proyectos}
+
+\cvevent{Ponente en la PyConUS}{\accentsub{https://www.python.org/psf-landing/}{The Python Software Foundation}}{2023}{Salt Lake City, Utah}
+
+\begin{itemize}
+  \item Charla ``Orcha: Procesamiento Masivo Paralelo (MPP) y diseño de APIs''.
+  \item \textit{Lightning Talk} sobre qué es la PyConES.
+\end{itemize}
+
+\divider
+
+\cvevent{Organización PyConES}{\accentsub{https://es.python.org/}{Python España}}{2022, 2023}{España}
+
+\begin{itemize}
+  \item Gestión de otros voluntarios, recursos e infraestructura de la conferencia.
+  \item Contacto con empresas para opciones de patrocinio, gestión de recursos, plazos, etc.
+\end{itemize}
+
+\divider
+
+\cvevent{Coordinador de Voluntarios -- Equipo Médula}{Universidad Politénica de Madrid}{2018}{Madrid, España}
+
+\begin{itemize}
+  \item Gestión de todos los voluntarios que participaron en el proyecto (+60).
+  \item Formación y contacto con cientos de alumnos, explicándoles el proceso y cómo unirse.
+\end{itemize}
+
+% \divider
+
+\clearpage
+
+\cvsection[sidebar/2/sidebar.es]{Otra información}
+
+\nocite{*}
+
+{\large \printinfo{\faCode}{\textbf{Aplicaciones}}}
+
+\begin{center}
+  \appMaterialCard[8cm]{Handwashing reminder}{Kotlin}{Una aplicación que te recuerda cuándo lavarte las manos.}{Javinator9889/Handwashing-reminder}{https://github.com/Javinator9889/Handwashing-reminder}
+
+  \appMaterialCard[8cm]{pArm -- S2}{C}{pArm software embebido en el dispositivo final.}{pArm-TFG/pArm-S2}{https://github.com/pArm-TFG/pArm-S2}
+
+  \appMaterialCard[8cm]{Orcha}{Python}{Framework de orquestación y ejecución masiva de procesos.}{Javinator9889/orcha}{https://github.com/Javinator9889/orcha}
+
+  % \appMaterialCard[8cm]{pyGle}{Python}{Una herramienta para buscar en toda la web usando Google.}{Javinator9889/pyGle}{https://github.com/Javinator9889/pyGle}
+  \divider
+
+  ¿Interesado en ver más proyectos? Échale un vistazo a mi GitHub:
+  
+  \href{https://github.com/Javinator9889/}{\githubsymbol{} Javinator9889}
+\end{center}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{\textbf{Artículos}}}, type=article]
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+% If the NEXT page doesn't start with a \cvsection but you'd
+% still like to add a sidebar, then use this command on THIS
+% page to add it. The optional argument lets you pull up the
+% sidebar a bit so that it looks aligned with the top of the
+% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
